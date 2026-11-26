@@ -28,56 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            btnIrRegistro = new Button();
+            btnIrConsulta = new Button();
+            btnSalir = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnIrRegistro
             // 
-            button1.Location = new Point(118, 339);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnIrRegistro.BackColor = Color.FromArgb(255, 128, 255);
+            btnIrRegistro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIrRegistro.ForeColor = SystemColors.ButtonHighlight;
+            btnIrRegistro.Location = new Point(12, 224);
+            btnIrRegistro.Margin = new Padding(3, 4, 3, 4);
+            btnIrRegistro.Name = "btnIrRegistro";
+            btnIrRegistro.Size = new Size(266, 77);
+            btnIrRegistro.TabIndex = 0;
+            btnIrRegistro.Text = "Ir a Registro";
+            btnIrRegistro.UseVisualStyleBackColor = false;
+            btnIrRegistro.Click += btnIrRegistro_Click;
             // 
-            // button2
+            // btnIrConsulta
             // 
-            button2.Location = new Point(343, 339);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnIrConsulta.BackColor = Color.FromArgb(255, 128, 255);
+            btnIrConsulta.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIrConsulta.ForeColor = SystemColors.ButtonHighlight;
+            btnIrConsulta.Location = new Point(497, 224);
+            btnIrConsulta.Margin = new Padding(3, 4, 3, 4);
+            btnIrConsulta.Name = "btnIrConsulta";
+            btnIrConsulta.Size = new Size(266, 77);
+            btnIrConsulta.TabIndex = 1;
+            btnIrConsulta.Text = "Ir a Consulta";
+            btnIrConsulta.UseVisualStyleBackColor = false;
+            btnIrConsulta.Click += btnIrConsulta_Click;
             // 
-            // button3
+            // btnSalir
             // 
-            button3.Location = new Point(606, 339);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnSalir.BackColor = Color.FromArgb(255, 128, 255);
+            btnSalir.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalir.ForeColor = SystemColors.ButtonHighlight;
+            btnSalir.Location = new Point(254, 331);
+            btnSalir.Margin = new Padding(3, 4, 3, 4);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(266, 78);
+            btnSalir.TabIndex = 2;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(230, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(304, 236);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            BackColor = Color.FromArgb(192, 192, 255);
+            ClientSize = new Size(775, 442);
+            Controls.Add(btnIrConsulta);
+            Controls.Add(btnIrRegistro);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnSalir);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Menú principal";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnIrRegistro;
+        private Button btnIrConsulta;
+        private Button btnSalir;
+        private PictureBox pictureBox1;
     }
 }

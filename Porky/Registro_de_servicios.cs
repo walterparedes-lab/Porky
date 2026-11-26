@@ -128,11 +128,11 @@ namespace Porky
             total = subtotal + iva;
 
             // Mostrar resultados en los 5 Labels
-            lblManoObra.Text = $"${manoObra:N0}";
-            lblDescuento.Text = $"-${montoDescuento:N0} ({porcDescuento}%)";
-            lblSubtotal.Text = $"${subtotal:N0}";
-            lblIva.Text = $"${iva:N0}";
-            lblTotal.Text = $"${total:N0}";
+            lblManoObra.Text = $"Resultados Mano de Obra: ${manoObra:N0}";
+            lblDescuento.Text = $"Resultados de Descuentos (%): -${montoDescuento:N0} ({porcDescuento}%)";
+            lblSubtotal.Text = $"Subtotal: ${subtotal:N0}";
+            lblIva.Text = $"IVA (19%): ${iva:N0}";
+            lblTotal.Text = $"Total: ${total:N0}";
 
             return true;
         }

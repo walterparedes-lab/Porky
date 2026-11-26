@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -25,23 +26,23 @@ namespace Porky
 
         private void AplicarEstilos()
         {
-            // 1. Color de fondo del formulario (ejemplo: tono rosado suave o gris limpio)
+            // Color de fondo del formulario 
             this.BackColor = Color.FromArgb(192, 192, 255);
 
-            // 2. Estilo para los botones
+            // Estilo para los botones
             EstilizarBoton(btnBuscar, Color.FromArgb(236, 72, 153), Color.White);       // Rosa vibrante
             EstilizarBoton(btnMostrarTodos, Color.FromArgb(59, 130, 246), Color.White); // Azul
             EstilizarBoton(btnVolver, Color.FromArgb(107, 114, 128), Color.White);      // Gris
 
-            // 3. Estilo de la tabla (DataGridView)
+            // Estilo de la tabla 
             dgvServicios.BackgroundColor = Color.White;
-            dgvServicios.EnableHeadersVisualStyles = false; // Necesario para que tome el color del encabezado
+            dgvServicios.EnableHeadersVisualStyles = false; 
             dgvServicios.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(236, 72, 153); 
             dgvServicios.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvServicios.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5f, FontStyle.Bold);
-            dgvServicios.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(253, 242, 248); // Filas alternas
+            dgvServicios.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(253, 242, 248); 
 
-            // 4. Etiqueta de resultados y caja de texto
+            // Etiqueta de resultados y caja de texto
             lblResultados.ForeColor = Color.FromArgb(31, 41, 55);
             lblResultados.Font = new Font("Segoe UI", 10f, FontStyle.Bold);
             txtBuscarCliente.BackColor = Color.White;
@@ -117,7 +118,7 @@ namespace Porky
 
             foreach (DataRowView fila in vista)
             {
-                if (decimal.TryParse(fila["Total"].ToString(), out decimal totalFila))
+                if (decimal.TryParse(fila["Total"].ToString(), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal totalFila))
                 {
                     sumaTotales += totalFila;
                 }
